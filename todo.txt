@@ -1,0 +1,2 @@
+ranges with gap like A2-A5, AT+ - just make RangeForFirstCardFixed into a list of RankSpan and handle it
+get ranges from file

@@ -1,0 +1,68 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 3b80a34d2d03912886ad5ff232cfe0c2d013bb1b368734e7f0f64c4a352b4b82
+
+name:           texas-ranger
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/texas-ranger#readme>
+homepage:       https://github.com/githubuser/texas-ranger#readme
+bug-reports:    https://github.com/githubuser/texas-ranger/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/texas-ranger
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_texas_ranger
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , random
+  default-language: Haskell2010
+
+executable texas-ranger-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_texas_ranger
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , random
+    , texas-ranger
+  default-language: Haskell2010
+
+test-suite texas-ranger-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_texas_ranger
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , random
+    , texas-ranger
+  default-language: Haskell2010
